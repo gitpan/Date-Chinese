@@ -1,11 +1,11 @@
-#$Header: /home/cvs/date-chinese/lib/Date/Chinese.pm,v 1.2 2001/08/06 02:01:21 rbowen Exp $
+#$Header: /home/cvs/date-chinese/lib/Date/Chinese.pm,v 1.3 2001/08/06 02:18:34 rbowen Exp $
 package Date::Chinese;
 use strict;
 
 BEGIN {
 	use Exporter ();
 	use vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-	$VERSION     = (qw'$Revision: 1.2 $')[1];
+	$VERSION     = (qw'$Revision: 1.3 $')[1];
 	@ISA         = qw (Exporter);
 	@EXPORT      = qw ( yearofthe );
 	@EXPORT_OK   = qw ();
@@ -30,6 +30,14 @@ rather than just the year. And this will be a Date::ICal subclass, so
 that conversions directly from ICal to Chinese to ISO, for example,
 will be very simple.
 
+You should also note that the Chinese new year does not conicide with
+the Gregorian new year, so the determination of what year it is in the
+Chinese calendar is only going to be correct for a portion of te
+Gregorian year. I am trying to gain a better understanding of the
+various issues involved, so that I can have more accurate
+calculations. Meanwhile, this may amuse you while you're waiting for
+the real thing.
+
 =head1 SUPPORT
 
 datetime@perl.org
@@ -53,6 +61,37 @@ LICENSE file included with this module.
 =head1 SEE ALSO
 
  perl(1).
+ Reefknot ( http://reefknot.org/ )
+ http://dates.rcbowen.com/
+
+=head1 About the Chinese calendar
+
+Reference: The Oxford Companion to the Year - Bonnie Blackburn and
+Leofranc Holford-Strevens. Pg 696-707
+
+The Chinese calendar 19 year cycle. Seven of these 19 years have 13
+months, and the rest have 12. There's a whole heck of a lot more to it
+than the 12 animals that you see on your placemat at your favorite
+Chinese restaurant.
+
+There is a cycle of 10 stems and 12 branches. Each stem has associated
+with it an element (wood, fire, earth, metal, water) a yang (fir,
+kindling, hill, weapons, waves) a yin (bamboo, lamp-flame, plain,
+kettle, brooks) a cardinal point (east, south, centre, west, north)
+and a planet (Jupiter, Mars, Saturn, Venus, Mercury).
+
+Likewise, each branch has associated with it an animal, an element, a
+double-hour, a compass point, and a sign of the zodiac.
+
+Each of these various cycles are going on at the same time, and so
+interact with each other to produce combinations of all of these
+different components. And various combinations mean various things.
+
+There are, of course, many folks that have more knowledge of how this
+all works than I do. I'm just a mathematician.
+http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml seems like
+a goo place to start, but there are many other very informative sites
+on the net.
 
 =cut
 
