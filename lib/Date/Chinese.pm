@@ -1,11 +1,11 @@
-#$Header: /home/cvs/date-chinese/lib/Date/Chinese.pm,v 1.3 2001/08/06 02:18:34 rbowen Exp $
+#$Header: /home/cvs/date-chinese/lib/Date/Chinese.pm,v 1.10 2002/08/29 23:43:33 rbowen Exp $
 package Date::Chinese;
 use strict;
 
 BEGIN {
 	use Exporter ();
 	use vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-	$VERSION     = (qw'$Revision: 1.3 $')[1];
+	$VERSION     = (qw'$Revision: 1.10 $')[1];
 	@ISA         = qw (Exporter);
 	@EXPORT      = qw ( yearofthe );
 	@EXPORT_OK   = qw ();
