@@ -1,11 +1,11 @@
-#$Header: /home/cvs/date-chinese/lib/Date/Chinese.pm,v 1.10 2002/08/29 23:43:33 rbowen Exp $
+#$Header: /cvsroot/date-chinese/lib/Date/Chinese.pm,v 1.10 2002/08/29 23:43:33 rbowen Exp $
 package Date::Chinese;
 use strict;
 
 BEGIN {
 	use Exporter ();
 	use vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-	$VERSION     = (qw'$Revision: 1.10 $')[1];
+	$VERSION     = (qw'$Revision: 1.11 $')[1];
 	@ISA         = qw (Exporter);
 	@EXPORT      = qw ( yearofthe );
 	@EXPORT_OK   = qw ();
@@ -90,7 +90,7 @@ different components. And various combinations mean various things.
 There are, of course, many folks that have more knowledge of how this
 all works than I do. I'm just a mathematician.
 http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml seems like
-a goo place to start, but there are many other very informative sites
+a good place to start, but there are many other very informative sites
 on the net.
 
 =cut
@@ -101,7 +101,8 @@ sub yearofthe {
     my $cycle = ( $year - 3 )%60;
 
     my $stem = $cycle % 10; # Not using this right now
-    my @stems = qw(jia yi bing ding wu ji geng xin ren gui);
+    # my @stems = qw(jia yi bing ding wu ji geng xin ren gui);
+    my @stems = qw(wood wood fire fire earth earth metal metal water water);
     $stem = $stems[$stem-1];
 
     my $branch = $cycle % 12; 
@@ -111,7 +112,7 @@ sub yearofthe {
                       sheep monkey fowl dog pig );
     my $yearofthe = $branches[$branch - 1];
 
-    return "Year of the $yearofthe";
+    return "Year of the $yearofthe, $stem";
 }
 
 1;

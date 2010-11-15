@@ -9,3 +9,4 @@ lib/Date/Chinese.pm
 t/01load.t
 t/02yearofthe.t
 
+META.yml                                 Module meta-data (added by MakeMaker)
