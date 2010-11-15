@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Date-Chinese
-version:            1.11
+version:            1.12
 abstract:           Calculate dates in the Chinese calendar
 author:
     - Rich Bowen (rbowen@rcbowen.com)

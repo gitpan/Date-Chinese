@@ -5,7 +5,7 @@ use strict;
 BEGIN {
 	use Exporter ();
 	use vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-	$VERSION     = (qw'$Revision: 1.11 $')[1];
+	$VERSION     = (qw'$Revision: 1.12 $')[1];
 	@ISA         = qw (Exporter);
 	@EXPORT      = qw ( yearofthe );
 	@EXPORT_OK   = qw ();
@@ -20,23 +20,18 @@ Date::Chinese - Calculate dates in the Chinese calendar
 
   use Date::Chinese;
 
-  $year = yearofthe( 1999 ); # "Year of the hare"
+  $year = yearofthe( 1999 ); # "Year of the hare, earth"
 
 =head1 DESCRIPTION
 
 Please note that the API of this module is I<guaranteed> to change in
 future versions. I'll hopefully be adding more details about the date,
-rather than just the year. And this will be a Date::ICal subclass, so
-that conversions directly from ICal to Chinese to ISO, for example,
-will be very simple.
+rather than just the year.
 
 You should also note that the Chinese new year does not conicide with
 the Gregorian new year, so the determination of what year it is in the
-Chinese calendar is only going to be correct for a portion of te
-Gregorian year. I am trying to gain a better understanding of the
-various issues involved, so that I can have more accurate
-calculations. Meanwhile, this may amuse you while you're waiting for
-the real thing.
+Chinese calendar is only going to be correct for a portion of the
+Gregorian year.
 
 =head1 SUPPORT
 
@@ -61,7 +56,6 @@ LICENSE file included with this module.
 =head1 SEE ALSO
 
  perl(1).
- Reefknot ( http://reefknot.org/ )
  http://dates.rcbowen.com/
 
 =head1 About the Chinese calendar
@@ -69,7 +63,7 @@ LICENSE file included with this module.
 Reference: The Oxford Companion to the Year - Bonnie Blackburn and
 Leofranc Holford-Strevens. Pg 696-707
 
-The Chinese calendar 19 year cycle. Seven of these 19 years have 13
+The Chinese calendar is a 19 year cycle. Seven of these 19 years have 13
 months, and the rest have 12. There's a whole heck of a lot more to it
 than the 12 animals that you see on your placemat at your favorite
 Chinese restaurant.
@@ -88,7 +82,8 @@ interact with each other to produce combinations of all of these
 different components. And various combinations mean various things.
 
 There are, of course, many folks that have more knowledge of how this
-all works than I do. I'm just a mathematician.
+all works than I do. I just used to be a mathematician.
+
 http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml seems like
 a good place to start, but there are many other very informative sites
 on the net.
